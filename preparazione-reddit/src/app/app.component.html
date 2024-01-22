@@ -1,0 +1,21 @@
+<div class="container">
+<h1>Preparazione alla Verifica</h1>
+<form class="jumbotron">
+  <div class="form-group">
+  <label for="testo">Titolo:</label>
+  <input name="testo" #titolo class="form-control"></div>
+  
+  <div class="form-group">
+  <label for="spam">spam:</label>
+  <input name="spam" #ripetizioni class="form-control"></div>
+
+  <button (click)="cliccato(titolo, ripetizioni)" class="btn btn-danger mt-2">Spamma dai</button>
+</form>
+
+<ul>
+<div *ngFor="let testo of vettore, let i = index">
+  <app-frase [testo] = 'testo' [numero] = 'i'></app-frase>
+</div>
+</ul>
+
+</div>
