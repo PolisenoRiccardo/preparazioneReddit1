@@ -11,6 +11,7 @@ export class AppComponent implements OnInit{
   cliccato(titolo: HTMLInputElement, ripetizioni: HTMLInputElement): boolean 
   {
     let cont = Number(ripetizioni.value);
+    this.vettore = [];
     for(let i:number =0; i< cont; i++)  //Ciclo For in typescript
     {
       this.vettore.push(i+" "+titolo.value);
